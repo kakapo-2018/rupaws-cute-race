@@ -1,12 +1,8 @@
 import React from 'react'
 
-import Words from './Words'
-import AddWord from './AddWord'
-
 const App = () => (
   <div className='app-container'>
-    <Words />
-    <AddWord />
+    <h1>Hello, I'm an app</h1>
   </div>
 )
 

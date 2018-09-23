@@ -1,3 +1,5 @@
+// This is an example reducer! Not for final use
+
 const words = (state = [], action) => {
   switch (action.type) {
     case 'ADD_WORD':
