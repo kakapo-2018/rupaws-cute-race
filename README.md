@@ -1,4 +1,4 @@
-# rupaws-cute-race
+## RuPaw's Cute Race
 If don't find yourself cute, how the hell are you gonna find anyone else cute?
 
 ## Install
