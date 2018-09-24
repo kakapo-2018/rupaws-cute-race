@@ -8,7 +8,7 @@ class Header extends React.Component {
     render() {
         return (
             <div className="header">
-                <h1>Rupaws Cute Race</h1>
+                <img src='title.svg'></img>
                 <input type="button" value="Leaderboard"></input>
                 <input type="button" value="Home"></input>
             </div>
