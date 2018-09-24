@@ -1,11 +1,14 @@
 exports.up = (knex, Promise) => {
-  return knex.schema.createTable('users', (table) => {
+  return knex.schema.createTable('animals', (table) => {
     table.increments('id').primary()
-    table.string('name')
-    table.string('email')
+    table.string('type')
+    table.string('imgSrc')
+    table.integer('votes')
   })
 }
 
 exports.down = (knex, Promise) => {
-  return knex.schema.dropTable('users')
+  return knex.schema.dropTable('animals')
 }
+
+

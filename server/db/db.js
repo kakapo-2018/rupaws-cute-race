@@ -3,16 +3,24 @@ const config = require('../../knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getUser: getUser,
-  getUsers: getUsers
+  updateRanking: updateRanking,
+  getAnimals: getAnimals,
+  getSpecies: getSpecies
 }
 
-function getUsers (testConn) {
+function getAnimals (testConn) {
   const conn = testConn || connection
-  return conn('users').select()
+  return conn('animals').select()
 }
 
-function getUser (id, testConn) {
+
+function updateRanking (testConn) {
   const conn = testConn || connection
-  return conn('users').where('id', id).first()
+  return conn('animals').select().orderBy('votes','desc').limit(10)
+}
+
+
+function getSpecies (type, testConn) {
+  const conn = testConn || connection
+  return conn('animals').where('type', type).select() // insert top 10 logiv
 }
