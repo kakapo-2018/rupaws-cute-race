@@ -124,6 +124,15 @@ function dbGetAnimalsByParam (animal) {
           "votes": 10
         }
       ]
+    case "human":
+      return [
+        {
+          "id": 8,
+          "type": "human",
+          "imgSrc": "human1.jpg",
+          "votes": 16
+        }
+      ]
     case null:
       return []
   }

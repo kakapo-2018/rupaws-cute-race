@@ -13,7 +13,7 @@ export function getAllAnimals (cb) {
 }
 
 export function getAnimalByParam (animal, cb) {
-  // animal can be "dog", "panda", "cat", "aye-aye" or "sloth"
+  // animal can be "dog", "panda", "cat", "aye-aye", "sloth" or "human"
   let url = getAnimalByParamURL + animal
   request
     .get(url)
