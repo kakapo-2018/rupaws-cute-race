@@ -17,10 +17,6 @@ server.use(express.urlencoded({extended: true}))
 server.use('/api/animals', apiRoutes)
  
 
-server.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
-});
-
 module.exports = server
 
 
