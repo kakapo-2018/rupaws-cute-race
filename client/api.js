@@ -4,7 +4,7 @@ const getAllAnimalsURL = "http://localhost:3000/api/v1/animals/all"
 const getAnimalByParamURL = "http://localhost:3000/api/v1/animals/" //followed by param
 const voteAnimalURL = "http://localhost:3000/api/v1/animals/vote"
 
-export function getAllAnimals (cb) {
+export function getAllAnimals(cb) {
   request
     .get(getAllAnimalsURL)
     .end((err, res) => {
@@ -12,7 +12,7 @@ export function getAllAnimals (cb) {
     })
 }
 
-export function getAnimalByParam (animal, cb) {
+export function getAnimalByParam(animal, cb) {
   // animal can be "dog", "panda", "cat", "aye-aye", "sloth" or "human"
   let url = getAnimalByParamURL + animal
   request
@@ -22,8 +22,8 @@ export function getAnimalByParam (animal, cb) {
     })
 }
 
-export function voteAnimalURL (id, cb) {
-  let obj = {"id": id}
+export function voteAnimal(id, cb) {
+  let obj = { "id": id }
   request
     .post(voteAnimalURL)
     .send(obj)

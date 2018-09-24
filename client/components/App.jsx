@@ -1,9 +1,31 @@
-import React from 'react'
+import React from 'react';
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
-const App = () => (
-  <div className='app-container'>
-    <h1>Hello, I'm an app</h1>
-  </div>
-)
+import Header from './Header'
+import Footer from './Footer'
+import Landing from './Landing'
+import Species from './Species'
 
-export default App
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {}
+  }
+  render() {
+    return (
+      <Router>
+        <div>
+          <Header />
+          <div>
+            <Route path="/species" component={Species} />
+            <Route path="/landing" component={Landing} />
+          </div>
+          <Footer />
+        </div>
+      </Router>
+    );
+  }
+}
+
+export default App;
+
