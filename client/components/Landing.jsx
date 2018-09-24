@@ -6,35 +6,18 @@ class Landing extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      panda: [],
-      allAnimals: []
     }
-    this.getAnimalsByParam = this.getAnimalsByParam.bind(this)
-    this.getAllAnimals = this.getAllAnimals.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  getAnimalsByParam(e, data) {
-    this.setState({
-      panda: data
-    })
-  }
+  handleClick(e) {
+    let selectedAnimal = e.target
+    console.log('clicked', selectedAnimal)
 
-  getAllAnimals(e, data) {
-    this.setState({
-      allAnimals: data
-    })
-  }
-
-
-  componentDidMount() {
-    console.log(this.props);
-
-    api.getAnimalByParam('dog', this.getAnimalsByParam)
-    api.getAllAnimals(this.getAllAnimals)
   }
 
   render() {
-    console.log(this.state.panda);
+    console.log(this.state.animals);
 
     return (
       <div>
@@ -44,11 +27,8 @@ class Landing extends React.Component {
         <table>
           <tbody>
             <tr>
-            </tr>
-            <tr>
-              <td>Hello2</td>
-              <td>Hi2</td>
-              <td>Goodbye2</td>
+              <td><a href="#" onClick={() => this.props.loadAnimal('sloth')}>Sloth</a></td>
+              <td><a href="#" onClick={() => this.props.loadAnimal('dog')}>Dog</a></td>
             </tr>
           </tbody>
         </table>

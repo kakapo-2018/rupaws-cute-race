@@ -6,11 +6,13 @@ class Species extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      animals: this.props.animals
     }
   }
 
 
   render() {
+
     return (
       <div>
 
@@ -19,8 +21,9 @@ class Species extends React.Component {
         <table>
           <tbody>
             <tr>
-              <td><img src=""></img></td>
-              <td>Dog</td>
+              <td>{this.props.animals.map(animal => {
+                return <img src={animal.imgSrc}></img>
+              })}}</td>
               <td>Dog</td>
             </tr>
             <tr>
