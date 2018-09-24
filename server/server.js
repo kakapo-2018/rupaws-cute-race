@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const server = express()
 
 const path = require('path');
-const routes = require('./routes')
+const apiRoutes = require('./routes/api')
 
 
 // Middleware
@@ -14,6 +14,10 @@ server.use(express.urlencoded({extended: true}))
 
 // Routes
 
-server.use('/', routes)
+server.use('/api/v1', apiRoutes)
+
+server.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+});
 
 module.exports = server
