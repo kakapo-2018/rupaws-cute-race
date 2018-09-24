@@ -5,6 +5,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Landing from './Landing'
 import Species from './Species'
+import homepage from './homepage'
 
 class App extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class App extends React.Component {
           <Header />
           <div>
             <Route path="/species" component={Species} />
-            <Route path="/landing" component={Landing} />
+            <Route path="/" component={homepage} />
           </div>
           <Footer />
         </div>
