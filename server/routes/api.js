@@ -8,68 +8,46 @@ const router = express.Router()
 router.get('/animals/all', getAllAnimals)
 
 function getAllAnimals (req, res, next) {
-  res.json(dbGetAllAnimals())
-  // dbGetAllAnimals()
-  //   .then(animals => {
-  //     res.json(animals)
-  //   })
-  //   .catch(err => {
-  //     res.status(500).send('DATABASE ERROR: ' + err.message)
-  //   })
+
+    
+  db.getAnimals()
+    .then(animals => {
+      res.json(animals)
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+}
+
+router.post('/animals/vote', viewVotes)
+
+function viewVotes (req, res, next) {
+  db.getRanking()
+
+    .then(animals => {
+      res.json(animals)
+      console.log(res.json(animals))
+    }) 
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 }
 
 router.get('/animals/:animal', getAnimalsByParam)
 
 function getAnimalsByParam (req, res, next) {
-  res.json(dbGetAnimalsByParam(req.params.animal))
-  // dbGetAnimalsByParam(req.params.animal)
-  //   .then(animals => {
-  //     res.json(animals)
-  //   })
-  //   .catch(err => {
-  //     res.status(500).send('DATABASE ERROR: ' + err.message)
-  //   })
+  db.getSpecies(req.params.animal)
+    .then(animals => {
+      res.json(animals)
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 }
 
-router.post('/animals/vote', updateVotes)
 
-function updateVotes (req, res, next) {
-  res.json(dbUpdateVotes(req.body.id))
-  // dbUpdateVotes(req.body.id)
-  //   .then(animals => {
-  //     res.json(animals)
-  //   })
-  //   .catch(err => {
-  //     res.status(500).send('DATABASE ERROR: ' + err.message)
-  //   })
-}
+// router.post('/animals/vote', updateVote)
 
-// dummy db functions
-
-function dbGetAllAnimals () {
-  return (
-    [
-      {
-        "id": 1,
-        "type": "panda",
-        "imgSrc": "panda1.jpg",
-        "votes": 5
-      },
-      {
-        "id": 2,
-        "type": "panda",
-        "imgSrc": "panda2.jpg",
-        "votes": 3
-      },
-      {
-        "id": 3,
-        "type": "dog",
-        "imgSrc": "dog1.jpg",
-        "votes": 26
-      }
-    ]
-  )
-}
 
 function dbGetAnimalsByParam (animal) {
   switch (animal) {

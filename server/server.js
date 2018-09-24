@@ -14,8 +14,7 @@ server.use(express.urlencoded({extended: true}))
 
 // Routes
 
-server.use('/api/animals', apiRoutes)
- 
+server.use('/api', apiRoutes) 
 
 module.exports = server
 
