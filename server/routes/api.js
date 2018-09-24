@@ -73,7 +73,7 @@ function dbGetAllAnimals () {
 
 function dbGetAnimalsByParam (animal) {
   switch (animal) {
-    case "dogs":
+    case "dog":
       return [
         {
           "id": 3,
@@ -82,7 +82,7 @@ function dbGetAnimalsByParam (animal) {
           "votes": 26
         }
       ]
-    case "pandas":
+    case "panda":
       return [
         {
           "id": 1,
@@ -97,7 +97,7 @@ function dbGetAnimalsByParam (animal) {
           "votes": 3
         }
       ]
-    case "sloths":
+    case "sloth":
       return [
         {
           "id": 5,
@@ -106,7 +106,7 @@ function dbGetAnimalsByParam (animal) {
           "votes": 21
         }
       ]
-    case "aye-ayes":
+    case "aye-aye":
       return [
         {
           "id": 6,
@@ -115,7 +115,7 @@ function dbGetAnimalsByParam (animal) {
           "votes": 15
         }
       ]
-    case "cats":
+    case "cat":
       return [
         {
           "id": 7,
