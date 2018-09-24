@@ -24,10 +24,6 @@ function viewVotes (req, res, next) {
     .then(animals => {
       
       res.json(animals)
-<<<<<<< HEAD
-    
-=======
->>>>>>> 0d3b0ff37a627d430143c93ec57509befcc5e580
     }) 
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)

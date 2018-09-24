@@ -119,6 +119,72 @@ exports.seed = function (knex, Promise) {
           type: "panda",
           imgSrc: "https://res.cloudinary.com/teepublic/image/private/s--IhT1YGWj--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1486569368/production/designs/1195431_1.jpg",
           votes: 235
+        },
+        {
+          id: 20,
+          type: "dog",
+          imgSrc: "https://1.bp.blogspot.com/-mvQpqYY17jw/V6OhoJ1PS0I/AAAAAAAAEuc/IO45oD8MTgMLx7-MQmfJAzmuF7QLO8v8wCLcB/s1600/about-Brussels-Griffon.jpg",
+          votes: 235
+        },
+        {
+          id: 21,
+          type: "dog",
+          imgSrc: "http://dogsaholic.com/wp-content/uploads/2018/06/Pomsky-standing-810x595.jpg",
+          votes: 235
+        },
+        {
+          id: 22,
+          type: "dog",
+          imgSrc: "http://static.ddmcdn.com/en-us/apl/breedselector/images/breed-selector/dogs/breeds/shiba-inu_01_lg.jpg",
+          votes: 235
+        },
+        {
+          id: 23,
+          type: "dog",
+          imgSrc: "https://gfnc1kn6pi-flywheel.netdna-ssl.com/wp-content/uploads/2017/10/goldie.jpg",
+          votes: 235
+        },
+        {
+          id: 24,
+          type: "cat",
+          imgSrc: "https://zodab.com/wp-content/uploads/2018/06/cute-kitten-that-has-fur-like-a-leopard.jpg",
+          votes: 235
+        },
+        {
+          id: 25,
+          type: "cat",
+          imgSrc: "https://cdn1-www.cattime.com/assets/uploads/gallery/american-curl-cats-and-kittens/american-curl-cats-and-kittens-5.jpg",
+          votes: 235
+        },
+        {
+          id: 26,
+          type: "cat",
+          imgSrc: "https://vetstreet.brightspotcdn.com/dims4/default/3acf9d1/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fe7%2F72%2F0e9bf32843e4a3fef50b9339cea5%2FAmerican-Shorthair-AP-1RPWID-645sm3614.jpg",
+          votes: 235
+        },
+        {
+          id: 27,
+          type: "cat",
+          imgSrc: "https://www.catster.com/wp-content/uploads/2018/01/Ragdoll-cat-on-blue-backdrop-.jpg",
+          votes: 235
+        },
+        {
+          id: 28,
+          type: "aye aye",
+          imgSrc: "https://i.pinimg.com/originals/79/90/12/799012be4e154034c42ffafb8c24ab74.jpg",
+          votes: 235
+        },
+        {
+          id: 29,
+          type: "sloth",
+          imgSrc: "https://www.catster.com/wp-content/uploads/2018/01/Ragdoll-cat-on-blue-backdrop-.jpg",
+          votes: 235
+        },
+        {
+          id: 30,
+          type: "sloth",
+          imgSrc: "https://i.ytimg.com/vi/aaqzPMOd_1g/maxresdefault.jpg",
+          votes: 235
         }
       ])
     })
