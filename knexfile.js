@@ -23,7 +23,7 @@ module.exports = {
       max: 10
     },
     migrations: {
-      tableName: 'animals'
+      tableName: 'knex_migrations'
     }
   }
 }
