@@ -46,6 +46,8 @@ class homepage extends React.Component {
                 <td><img src= {this.state.animals.length > 0 && this.state.animals[0].imgSrc}></img>Panda</td>
                 <td><img src= {this.state.animals.length > 0 && this.state.animals[1].imgSrc}></img>Dog</td>
                 <td><img src= {this.state.animals.length > 0 && this.state.animals[2].imgSrc}></img>Cat</td>
+                </tr>
+                <tr>
                 <td><img src= {this.state.animals.length > 0 && this.state.animals[3].imgSrc}></img>Sloth</td>
                 <td><img src= {this.state.animals.length > 0 && this.state.animals[4].imgSrc}></img>Aye aye</td>
                 <td><img src= {this.state.animals.length > 0 && this.state.animals[5].imgSrc}></img>Human</td>
