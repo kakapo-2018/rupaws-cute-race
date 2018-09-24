@@ -25,8 +25,9 @@ function viewVotes (req, res, next) {
   db.getRanking()
 
     .then(animals => {
+      
       res.json(animals)
-      console.log(res.json(animals))
+    
     }) 
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)

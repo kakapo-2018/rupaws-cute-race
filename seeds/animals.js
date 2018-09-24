@@ -83,6 +83,42 @@ exports.seed = function (knex, Promise) {
           type: "aye aye",
           imgSrc: "https://hips.hearstapps.com/rbk.h-cdn.co/assets/16/15/1460508650-gallery-1460384978-redbook-zooey-deschanel-02.jpg",
           votes: 235
+        },
+        {
+          id: 14,
+          type: "human",
+          imgSrc: "http://www.gstatic.com/tv/thumb/tvbanners/446158/p446158_b_v8_ag.jpg",
+          votes: 235
+        },
+        {
+          id: 15,
+          type: "panda",
+          imgSrc: "https://qph.fs.quoracdn.net/main-qimg-05f6829b26ebfeeabf90262554461fe3-c",
+          votes: 235
+        },
+        {
+          id: 16,
+          type: "panda",
+          imgSrc: "https://img.rezdy.com/PRODUCT_IMAGE/71955/giant_panda1_706x456_lg.jpg",
+          votes: 235
+        },
+        {
+          id: 17,
+          type: "panda",
+          imgSrc: "https://az616578.vo.msecnd.net/files/2016/05/13/635987777452272816-693802622_panda7.jpg",
+          votes: 235
+        },
+        {
+          id: 18,
+          type: "panda",
+          imgSrc: "https://c1.staticflickr.com/6/5539/9128322778_950ac71c79.jpg",
+          votes: 235
+        },
+        {
+          id: 19,
+          type: "panda",
+          imgSrc: "https://res.cloudinary.com/teepublic/image/private/s--IhT1YGWj--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1486569368/production/designs/1195431_1.jpg",
+          votes: 235
         }
       ])
     })
