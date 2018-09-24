@@ -16,8 +16,4 @@ server.use(express.urlencoded({extended: true}))
 
 server.use('/api/v1', apiRoutes)
 
-server.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
-});
-
 module.exports = server
