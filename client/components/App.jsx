@@ -5,21 +5,31 @@ import Header from './Header'
 import Footer from './Footer'
 import Landing from './Landing'
 import Species from './Species'
+import Homepage from './Homepage'
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      activePage: "home",
+      activeSpecies: null
+    }
+    this.setActivePage = this.setActivePage.bind(this)
   }
+
+  setActivePage(page, species) {
+    this.setState({
+      activePage: page,
+      activeSpecies: species
+    })
+  }
+
   render() {
     return (
       <Router>
         <div>
-          <Header />
-          <div>
-            <Route path="/species" component={Species} />
-            <Route path="/landing" component={Landing} />
-          </div>
+          <Header setActivePage={this.setActivePage}/>
+          {this.state.activePage == "home" ? <Homepage setActivePage={this.setActivePage}/> : <Species species={this.state.activeSpecies}/>}
           <Footer />
         </div>
       </Router>
