@@ -14,10 +14,14 @@ server.use(express.urlencoded({extended: true}))
 
 // Routes
 
-server.use('/api/v1', apiRoutes)
+server.use('/api/animals', apiRoutes)
+ 
 
 server.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
 module.exports = server
+
+
+
