@@ -22,6 +22,7 @@ router.post('/animals/vote', viewVotes)
 function viewVotes (req, res, next) {
   db.updateRanking()
     .then(animals => {
+      
       res.json(animals)
     }) 
     .catch(err => {
