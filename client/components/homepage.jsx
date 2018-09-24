@@ -2,7 +2,7 @@ import React from 'react';
 
 const api = require('../api')
 
-class homepage extends React.Component {
+class Homepage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,51 +24,22 @@ class homepage extends React.Component {
   }
 
   render() {
-    
-    console.log(this.state.animals.length > 0 && this.state.animals[0].imgSrc);
-
+    let arr = [];
     return (
       <div>
-
         <h2>Pick an Animal: </h2>
-
-        <table>
-          <tbody>
-             
-            <tr>  
-         
-            {/* {this.state.animals.length > 0 && this.state.animals.map(animal => {
-                    console.log(animal)
-                    return <td><img src={animal.imgSrc}></img></td>
-                 
-              })
-              } */}
-                <td><img src= {this.state.animals.length > 0 && this.state.animals[0].imgSrc}></img>Panda</td>
-                <td><img src= {this.state.animals.length > 0 && this.state.animals[1].imgSrc}></img>Dog</td>
-                <td><img src= {this.state.animals.length > 0 && this.state.animals[2].imgSrc}></img>Cat</td>
-                </tr>
-                <tr>
-                <td><img src= {this.state.animals.length > 0 && this.state.animals[3].imgSrc}></img>Sloth</td>
-                <td><img src= {this.state.animals.length > 0 && this.state.animals[4].imgSrc}></img>Aye aye</td>
-                <td><img src= {this.state.animals.length > 0 && this.state.animals[5].imgSrc}></img>Human</td>
-
-
-                
-  
-
-
-
-
-                
-
-            </tr>
-           
-          </tbody>
-        </table>
-
+          <div className="animal-home-display">
+              {this.state.animals.map(animal => {
+                arr.push(animal)
+                return arr.length < 6 ? (<div className="homepage-img">
+                  <img src={animal.imgSrc} alt={animal.type} onClick={() => {this.props.setActivePage("species", animal.type)}}/>
+                  <h3>{animal.type}</h3>
+                </div>) : null
+              })}
+          </div>
       </div>
     );
   }
 }
 
-export default homepage;
+export default Homepage;

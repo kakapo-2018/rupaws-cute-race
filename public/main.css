@@ -1,3 +1,6 @@
+* {
+  background-color: pink;
+}
 .dot {
   width: 2rem;
   height: 2rem;
@@ -13,4 +16,13 @@ button {
 
 img {
   max-width: 300px;
+}
+
+.animal-home-display {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.homepage-img {
+  margin: 8px;
 }

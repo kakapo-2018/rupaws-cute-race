@@ -10,7 +10,7 @@ class Header extends React.Component {
             <div className="header">
                 <img src='title.svg'></img>
                 <input type="button" value="Leaderboard"></input>
-                <input type="button" value="Home"></input>
+                <input type="button" value="Home" onClick={(e) => {e.preventDefault(); this.props.setActivePage("home", null)}}></input>
             </div>
         );
     }
