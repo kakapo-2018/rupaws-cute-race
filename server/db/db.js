@@ -3,7 +3,7 @@ const config = require('../../knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getRanking: getRanking,
+  updateRanking: updateRanking,
   getAnimals: getAnimals,
   getSpecies: getSpecies
 }
@@ -14,7 +14,7 @@ function getAnimals (testConn) {
 }
 
 
-function getRanking (testConn) {
+function updateRanking (testConn) {
   const conn = testConn || connection
   return conn('animals').select().orderBy('votes','desc').limit(10)
 }
