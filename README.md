@@ -70,4 +70,4 @@ yarn dev
 
 * Back End: Matt & Yuzuki
 * Front End: Winston & Zane
-* API: Bell
+* API: Bella
