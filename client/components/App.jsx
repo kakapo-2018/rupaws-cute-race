@@ -1,9 +1,23 @@
-import React from 'react'
+import React from 'react';
+import Header from './Header'
+import Footer from './Footer'
+import Landing from './Landing'
 
-const App = () => (
-  <div className='app-container'>
-    <h1>Hello, I'm an app</h1>
-  </div>
-)
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {}
+  }
+  render() {
+    return (
+      <div>
+        <Header />
+        <Landing />
+        <Footer />
+      </div>
+    );
+  }
+}
 
-export default App
+export default App;
+
