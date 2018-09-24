@@ -16,7 +16,7 @@ yarn dev
   Front-end: you will need to clear the words.js reducer.
   Back-end: you will need to delete the Words migration and seed, and replace with a new, more relevant one. Routes and database functions will also change.
   
- (./image.jpg)
+![Image](./image.JPG)
   
 ## User Stories
 
