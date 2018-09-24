@@ -1,10 +1,15 @@
 import React from 'react';
 
+const api = require('../api')
+
 class Species extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+    }
   }
+
+
   render() {
     return (
       <div>
@@ -14,7 +19,7 @@ class Species extends React.Component {
         <table>
           <tbody>
             <tr>
-              <td>Dog</td>
+              <td><img src=""></img></td>
               <td>Dog</td>
               <td>Dog</td>
             </tr>
@@ -25,6 +30,7 @@ class Species extends React.Component {
             </tr>
           </tbody>
         </table>
+
       </div>
     );
   }

@@ -6,23 +6,35 @@ class Landing extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      animals: []
+      panda: [],
+      allAnimals: []
     }
     this.getAnimalsByParam = this.getAnimalsByParam.bind(this)
+    this.getAllAnimals = this.getAllAnimals.bind(this)
   }
 
   getAnimalsByParam(e, data) {
     this.setState({
-      animals: data
+      panda: data
     })
   }
 
+  getAllAnimals(e, data) {
+    this.setState({
+      allAnimals: data
+    })
+  }
+
+
   componentDidMount() {
-    api.getAnimalByParam('panda', this.getAnimalsByParam)
+    console.log(this.props);
+
+    api.getAnimalByParam('dog', this.getAnimalsByParam)
+    api.getAllAnimals(this.getAllAnimals)
   }
 
   render() {
-    console.log(this.state.animals);
+    console.log(this.state.panda);
 
     return (
       <div>
@@ -32,10 +44,6 @@ class Landing extends React.Component {
         <table>
           <tbody>
             <tr>
-              {this.state.animals.map(animal => {
-                return <td>{animal.type}</td>
-                // return <td><img src={this.state.animals.imgSrc}></img></td>
-              })}
             </tr>
             <tr>
               <td>Hello2</td>

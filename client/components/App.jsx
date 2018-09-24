@@ -17,8 +17,12 @@ class App extends React.Component {
         <div>
           <Header />
           <div>
-            <Route path="/species" component={Species} />
-            <Route path="/landing" component={Landing} />
+            {/* <Route path="/species" component={Species} /> */}
+            {/* <Route path="/" component={Landing} test="test" /> */}
+            <Route path="/species" render={props => {
+              return <Species {...props} test="test" />
+            }
+            } />
           </div>
           <Footer />
         </div>
