@@ -31,3 +31,17 @@ export function voteAnimalURL (id, cb) {
       cb(err, res.body)
     })
 }
+
+//------
+
+// Example API consumption function
+
+// api.getAnimalByParam ('panda', myFunc)
+
+// let myFunc = (e, stuff) => {
+//   this.setState({
+//     animals: stuff
+//   })
+// }
+
+//------
