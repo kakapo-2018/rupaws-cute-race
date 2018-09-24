@@ -1,10 +1,6 @@
 {
   "name": "boilerplate-knex",
   "version": "0.1.4",
-  "engines": {
-    "node": "10.8.0",
-    "yarn": "1.9.4"
-  },
   "description": "Express boilerplate with Knex.js",
   "repository": "https://github.com/kakapo-2018/rupaws-cute-race.git",
   "main": "server/index.js",
