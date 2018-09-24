@@ -36,3 +36,38 @@ yarn dev
   | Categories | View for user to select different types of animals |
   | Voting |View for user to vote their favorite image |
   | LeaderBoard | View for user to see the ranking  |
+
+
+## Reducers (Client Side)
+
+  | name | purpose |
+  | --- | --- |
+  | Navigate | Switch pages |
+  | CurrentPage | Display current animal page |
+  | Animals | Store the array of animals (from db) |
+  | TOP-10 | Store an array of the top 10 animals |
+  
+  
+   ## Actions
+
+ | type | data | purpose |
+ | --- | --- | --- |
+ | CHANGE_PAGE| page | Switch pages|
+ | REQ_ANIMALS | animals | Change animal |
+ | RECEIVE_ANIMAL | animals | Retreive the selected animal images from the server |
+ | UPDATE_RANK | rank |Update the ranking |
+ 
+ ## API (Client - Server)
+ 
+ ## DB (Server Side)
+ 1 table for all the animals
+(id, species, image and vote)
+ 
+## API docs: Request and response formats
+(see api-docs.md)
+
+## Team Roles
+
+* Back End: Matt & Yuzuki
+* Front End: Winston & Zane
+* API: Bell
