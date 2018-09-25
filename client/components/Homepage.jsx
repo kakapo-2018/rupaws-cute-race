@@ -18,9 +18,7 @@ class Homepage extends React.Component {
   }
 
   componentDidMount() {
-
     api.getAllAnimals(this.getAnimalsByParam)
-   
   }
 
   render() {
@@ -31,7 +29,7 @@ class Homepage extends React.Component {
           <div className="animal-home-display">
               {this.state.animals.map(animal => {
                 arr.push(animal)
-                return arr.length < 6 ? (<div className="homepage-img">
+                return arr.length <= 6 ? (<div className="homepage-img">
                   <img src={animal.imgSrc} alt={animal.type} onClick={() => {this.props.setActivePage("species", animal.type)}}/>
                   <h3>{animal.type}</h3>
                 </div>) : null
