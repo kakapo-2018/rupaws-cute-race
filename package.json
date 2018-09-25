@@ -5,7 +5,7 @@
   "repository": "https://github.com/kakapo-2018/rupaws-cute-race.git",
   "main": "server/index.js",
   "scripts": {
-    "postinstall": "webpack",
+    "postinstall": "webpack && knex migrate:latest && knex seed:run",
     "dev": "nodemon --watch server & webpack --watch",
     "start": "node server",
     "test": "jest"
