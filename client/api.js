@@ -1,8 +1,8 @@
 import request from 'superagent'
 
-const getAllAnimalsURL = "http://localhost:3000/api/v1/animals/all"
-const getAnimalByParamURL = "http://localhost:3000/api/v1/animals/" //followed by param
-const voteAnimalURL = "http://localhost:3000/api/v1/animals/vote"
+const getAllAnimalsURL = "/api/v1/animals/all"
+const getAnimalByParamURL = "/api/v1/animals/" //followed by param
+const voteAnimalURL = "/api/v1/animals/vote"
 
 export function getAllAnimals(cb) {
   request
