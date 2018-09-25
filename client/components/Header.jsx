@@ -8,9 +8,11 @@ class Header extends React.Component {
     render() {
         return (
             <div className="header">
-                <img src='title.svg'></img>
-                <input type="button" value="Leaderboard"></input>
-                <input type="button" value="Home" onClick={(e) => {e.preventDefault(); this.props.setActivePage("home", null)}}></input>
+                <img src='title.svg' className="header-title"></img>
+                <div className="header-btns">
+                  <input type="button" className="header-btn-text" value="Leaderboard"></input>
+                  <input type="button" className="header-btn-text" value="Home" onClick={(e) => {e.preventDefault(); this.props.setActivePage("home", null)}}></input>
+                </div>
             </div>
         );
     }

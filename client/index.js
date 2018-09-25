@@ -13,7 +13,7 @@ const store = createStore(reducers,
 document.addEventListener('DOMContentLoaded', () => {
   render(
     <Provider store={store}>
-      <App />
+      <App id="app"/>
     </Provider>,
     document.getElementById('app')
   )

@@ -34,7 +34,7 @@ class Species extends React.Component {
                 console.log(animal)
                 return (
                 <div className="homepage-img">
-                  <img src={animal.imgSrc} alt={animal.type}/>
+                  <img className="pics" src={animal.imgSrc} alt={animal.type}/>
                   <h3>{animal.type}</h3>
                 </div>)
               })}
